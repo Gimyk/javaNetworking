@@ -48,6 +48,12 @@ public class Client implements Serializable, ActionListener {
 
             String notification = (String) fromServer.readObject();
             System.out.println("The data from the server ::> " + notification);
+            if ("True".equals(notification)) {
+                JOptionPane.showMessageDialog(null, "You have sucessfully logged in");
+            } else {
+                JOptionPane.showMessageDialog(null, "Log in details invalid");
+
+            }
 
         } catch (Exception ex) {
             System.out.println("An error happened in the client \n" + ex);
