@@ -47,7 +47,7 @@ public class Client implements Serializable, ActionListener {
             toServer.writeObject(data);
 
             String notification = (String) fromServer.readObject();
-            System.out.println("The data from the server :: " + notification);
+            System.out.println("The data from the server ::> " + notification);
 
         } catch (Exception ex) {
             System.out.println("An error happened in the client \n" + ex);
@@ -79,3 +79,4 @@ public class Client implements Serializable, ActionListener {
 
     }
 }
+
